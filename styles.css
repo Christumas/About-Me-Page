@@ -134,7 +134,7 @@ main{
     background: #379777;
     border-radius: 50%;
     position: relative;
-    box-shadow: 2px 4px 4px 4px #F5F7F8;
+    box-shadow: 2px 4px 4px 4px grey;
     animation: 2s float ease-in-out infinite;
     animation-delay: 1s;
 
@@ -177,6 +177,7 @@ main{
 }
 
 /* Skills section */
+
 .skillsSection{
     margin:4rem 3rem;
     padding: 1rem;
@@ -206,6 +207,9 @@ main{
     text-align: center;
     padding: 1rem;
     font-size: 1rem;
+    box-shadow: 4px 4px 10px grey;
+    color:#45474B;
+    font-weight: bolder;
 
 }
 
@@ -220,4 +224,21 @@ main{
     border: none;
     box-shadow: 2px 2px 2px 2px;
     cursor: pointer;
+    position: relative; /*for the popping effect*/
+}
+
+.img{
+    object-fit: contain;
+}
+
+@keyframes pop {
+    0%{
+        transform: scale(1.5);
+        opacity: 1;
+    }
+
+    100%{
+        opacity: 0;
+    }
+    
 }
