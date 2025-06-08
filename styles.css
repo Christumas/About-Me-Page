@@ -11,7 +11,7 @@ body{
     display: flex;
     justify-content: right;
     margin:3rem;
-    z-index: 2;
+    z-index: 3;
     position: relative; /*adding this so that the menu background falls behind it. Z indexing doesnt work for elements 
     with position: static, in our case here .menu is positioned by default to static*/
 
@@ -39,13 +39,13 @@ body{
     display: flex;
     gap:2rem;
     list-style-type: none;
+    transition: 0.3s ease;
 }
 
 .navbar a{
     color: #379777;
     text-decoration: none;
 }
-
 
 
 .menuBackground{
@@ -57,8 +57,8 @@ body{
     top:0;
     border-radius: 50%;
     transform: translate(-20%,-20%);
-    display: none;
     transition: 0.3s ease-in-out;
+    /*i didnt set display here to none because i want the circle enlarging effect upon click*/
 }
 
 /* make the adjustments for a mobile screen */
@@ -103,4 +103,29 @@ body{
     }
     
     
+}
+
+
+/* main section styles */
+main{
+    margin:4rem 3rem;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.title{
+    font-size: 5rem;
+    text-align: left;
+    color:#F4CE14;
+    position: relative; /*for the floating animation*/
+
+}
+
+.imageContainer{
+    width:500px;
+    height:500px;
+    background: #379777;
+    border-radius: 50%;
+    position: relative;
 }
