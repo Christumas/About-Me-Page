@@ -119,8 +119,10 @@ main{
     text-align: left;
     color:#F4CE14;
     position: relative; /*for the floating animation*/
+    animation: 2s float ease-in-out infinite;
 
 }
+
 
 .imageContainer{
     width:500px;
@@ -128,4 +130,43 @@ main{
     background: #379777;
     border-radius: 50%;
     position: relative;
+    animation: 3s float ease-in-out infinite;
+    animation-delay: 1s;
+
+}
+
+@keyframes float {
+    0%{
+        transform: translateY(0);
+    }
+
+    50%{
+        transform:translateY(-10px)
+    }
+
+    100%{
+        transform: translateY(0);
+    }
+}
+
+/* About section styles */
+.aboutSection{
+    margin: 6rem 3rem;
+    padding: 1rem;
+
+}
+.aboutTitle{
+    color:#F4CE14;
+    text-align: left;
+}
+.description{
+    color:#379777;
+    margin-top: 3rem;
+    font-size: 2rem;
+    text-align: left;
+    line-height: 3rem;
+}
+
+.highlight{
+    color:#F4CE14;
 }
