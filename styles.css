@@ -38,6 +38,7 @@ body{
 .navbar{
     display: flex;
     gap:2rem;
+    font-size: 1.5rem;
     list-style-type: none;
     transition: 0.3s ease;
 }
@@ -62,7 +63,7 @@ body{
 }
 
 /* make the adjustments for a mobile screen */
-@media screen and (max-width:809px) {
+@media screen and (max-width:827px) {
     .menu{
         display: block;
     }
@@ -102,6 +103,9 @@ body{
         height:50%;
     }
     
+    .dontPress{
+        display: none;
+    }
     
 }
 
@@ -130,7 +134,8 @@ main{
     background: #379777;
     border-radius: 50%;
     position: relative;
-    animation: 3s float ease-in-out infinite;
+    box-shadow: 2px 4px 4px 4px #F5F7F8;
+    animation: 2s float ease-in-out infinite;
     animation-delay: 1s;
 
 }
@@ -169,4 +174,50 @@ main{
 
 .highlight{
     color:#F4CE14;
+}
+
+/* Skills section */
+.skillsSection{
+    margin:4rem 3rem;
+    padding: 1rem;
+    height:50%;
+}
+
+.skillsTitle, .interestsTitle{
+    color:#F4CE14;
+}
+
+.bubbleContainer-interests, .bubbleContainer-skills{
+    padding: 2rem;
+    height:40%;
+    width: 90%;
+    display: flex;
+    gap:1.5rem;
+    justify-content: center;
+}
+
+.skills, .interests{
+    width:200px;
+    border-radius: 50%;
+    background:#379777;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+    font-size: 1rem;
+
+}
+
+.dontPress{
+    text-align: center;
+    background: rgb(244, 78, 78);
+    font-family: inherit;
+    font-size: 0.5rem;
+    border-radius: 50%;
+    width:60px;
+    padding: 1rem;
+    border: none;
+    box-shadow: 2px 2px 2px 2px;
+    cursor: pointer;
 }
