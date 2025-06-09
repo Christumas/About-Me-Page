@@ -44,7 +44,7 @@ dontPressButton.addEventListener("click", ()=>{
                             poppedCount = 0;
                         })
 
-                    }, 2000)
+                    }, 500)
 
                 }
             }, {once:true})

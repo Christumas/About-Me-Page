@@ -213,6 +213,10 @@ main{
 
 }
 
+.skills:hover, .interests:hover{
+    transform: scale(1.2)!important ;
+}
+
 .dontPress{
     text-align: center;
     background: rgb(244, 78, 78);
