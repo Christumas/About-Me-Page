@@ -4,6 +4,7 @@ body{
     height: 100vh;
     margin:0;
     background: #45474B;
+    scroll-behavior: smooth;
 }
 
 /* header and nav styles */
@@ -48,7 +49,6 @@ body{
     text-decoration: none;
 }
 
-
 .menuBackground{
     position: absolute;
     min-width:0;
@@ -62,52 +62,11 @@ body{
     /*i didnt set display here to none because i want the circle enlarging effect upon click*/
 }
 
-/* make the adjustments for a mobile screen */
-@media screen and (max-width:827px) {
-    .menu{
-        display: block;
-    }
-
-    .hamburger{
-        display: flex;
-    }
-
-    .navbar{
-        display: none;
-        flex-direction: column;
-        padding-left: 0;
-        margin-top: 2rem;
-    }
-
-    /* changes to hamburger menu upon click, see script */
-
-    .hamburger.change #bar1{
-        transform: rotate(45deg)translate(12px,12px); /*value i got by playing around with the translation*/
-    }
-
-    .hamburger.change #bar2{
-        display: none;
-    }
-
-    .hamburger.change #bar3{
-        transform: rotate(-45deg);
-    }
-
-    .navbar.change{
-        display: flex;
-    }
-
-    .menuBackground.change{
-        display: block;
-        min-width:50vw; /*value i got by playing around*/
-        height:50%;
-    }
-    
-    .dontPress{
-        display: none;
-    }
-    
+.navbar a:hover{
+    color: #F4CE14;
 }
+
+
 
 
 /* main section styles */
@@ -167,11 +126,13 @@ main{
 .aboutSection{
     margin: 6rem 3rem;
     padding: 1rem;
+    scroll-snap-type: y mandatory;
 
 }
 .aboutTitle{
     color:#F4CE14;
     text-align: left;
+    scroll-snap-align: start;
 }
 .description{
     color:#379777;
@@ -285,4 +246,109 @@ main{
 
 #contact{
     color:#F4CE14;
+}
+
+/* make the adjustments for a slightly larger mobile screens */
+@media screen and (max-width:827px) {
+    .menu{
+        display: block;
+    }
+
+    .hamburger{
+        display: flex;
+    }
+
+    .navbar{
+        display: none;
+        flex-direction: column;
+        padding-left: 0;
+        margin-top: 2rem;
+    }
+
+    /* changes to hamburger menu upon click, see script */
+
+    .hamburger.change #bar1{
+        transform: rotate(45deg)translate(12px,12px); /*value i got by playing around with the translation*/
+    }
+
+    .hamburger.change #bar2{
+        display: none;
+    }
+
+    .hamburger.change #bar3{
+        transform: rotate(-45deg);
+    }
+
+    .navbar.change{
+        display: flex;
+    }
+
+    .menuBackground.change{
+        display: block;
+        min-width:50vw; /*value i got by playing around*/
+        height:50%;
+    }
+    
+    .dontPress{
+        display: none;
+    }
+
+     /* changes to skills and interests section, making it a carousel */
+
+    .bubbleContainer-skills, .bubbleContainer-interests{
+        display: flex;
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+        padding-left: 2rem;
+
+    }
+
+    .skills, .interests{
+        flex-shrink:0;
+        width:100px;
+        height: 100px;
+        scroll-snap-align: center;  
+       
+
+    }
+
+    
+}
+
+/* adjustments to screen sizes < 500px */
+@media screen and (max-width:578px){
+
+    /* changes to the main title section */
+    .menuBackground.change{
+    min-width:80vw;
+    
+    }
+    
+    .title{
+        font-size: 3rem;
+    }
+
+    .imageContainer{
+        width:200px;
+        height:200px;
+    }
+
+    /* changes to about section */
+    .description{
+        font-size: 1rem;
+    }
+
+
+    /* changes to contact section */
+    #contact{
+        text-align: center;
+    }
+
+    .getinTouch{
+        font-size: 1.5rem;
+    }
+
+    .email-id{
+        font-size: 1rem;
+    }
 }
