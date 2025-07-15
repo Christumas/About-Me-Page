@@ -3,7 +3,7 @@ body{
     font-family: 'Press Start 2P', monospace;
     height: 100vh;
     margin:0;
-    background: #45474B;
+    background: #EFECEC;
     scroll-behavior: smooth;
 }
 
@@ -29,7 +29,7 @@ body{
 }
 
 .bars{
-    background: #379777;
+    background: #0C2D57;
     width:100%;
     height:8%;
     border-radius: 3%;
@@ -45,7 +45,7 @@ body{
 }
 
 .navbar a{
-    color: #379777;
+    color: #0C2D57;
     text-decoration: none;
 }
 
@@ -53,7 +53,7 @@ body{
     position: absolute;
     min-width:0;
     height:0;
-    background: #F4CE14;
+    background: #FFB0B0;
     z-index: 1;
     top:0;
     border-radius: 50%;
@@ -63,7 +63,7 @@ body{
 }
 
 .navbar a:hover{
-    color: #F4CE14;
+    color: #FC6736;
 }
 
 
@@ -80,7 +80,7 @@ main{
 .title{
     font-size: 5rem;
     text-align: left;
-    color:#F4CE14;
+    color:#FC6736;
     position: relative; /*for the floating animation*/
     animation: 2s float ease-in-out infinite;
 
@@ -130,12 +130,12 @@ main{
 
 }
 .aboutTitle{
-    color:#F4CE14;
+    color:#FC6736;
     text-align: left;
     scroll-snap-align: start;
 }
 .description{
-    color:#379777;
+    color:#0C2D57;
     margin-top: 3rem;
     font-size: 2rem;
     text-align: left;
@@ -143,7 +143,7 @@ main{
 }
 
 .highlight{
-    color:#F4CE14;
+    color:#FC6736;
 }
 
 /* Skills section */
@@ -154,7 +154,7 @@ main{
 }
 
 .skillsTitle, .interestsTitle{
-    color:#F4CE14;
+    color:#FC6736;
 }
 
 .bubbleContainer-interests, .bubbleContainer-skills{
@@ -163,14 +163,14 @@ main{
     width: 90%;
     display: flex;
     gap:1.5rem;
-    justify-content: center;
+
 }
 
 .skills, .interests{
     width:200px;
     height: 200px;
     border-radius: 50%;
-    background:#379777;
+    background:#FFB0B0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -178,7 +178,7 @@ main{
     padding: 1rem;
     font-size: 1rem;
     box-shadow: 4px 4px 10px grey;
-    color:#45474B;
+    color:#0C2D57;
     font-weight: bolder;
 
 }
@@ -196,7 +196,7 @@ main{
     width:60px;
     padding: 1rem;
     border: none;
-    box-shadow: 2px 2px 2px 2px;
+    box-shadow: 2px 2px 10px;
     cursor: pointer;
     position: relative; /*for the popping effect*/
 }
@@ -224,14 +224,25 @@ main{
 }
 
 .projectsTitle{
-    color:#379777;
+    color:#FC6736;
     
 }
 
-#comingsoon{
-    color:#F4CE14;
+
+
+#github_link{
     text-align: center;
     margin-top: 4rem;
+}
+
+#gitlink{
+    color: #0C2D57;
+    text-decoration: none;
+    
+}
+
+#gitlink:hover{
+    color: #379777;
 }
 
 /* Contact section */
@@ -244,8 +255,12 @@ main{
     align-items: center;
 }
 
-#contact{
-    color:#F4CE14;
+.getinTouch{
+    color:#FC6736;
+}
+
+.email-id{
+    color:#0C2D57;
 }
 
 /* make the adjustments for a slightly larger mobile screens */
@@ -297,19 +312,53 @@ main{
 
     .bubbleContainer-skills, .bubbleContainer-interests{
         display: flex;
-        overflow-x: scroll;
+        gap: 1.5rem;
+        overflow-x: auto;
         scroll-snap-type: x mandatory;
-        padding-left: 2rem;
+        padding: 2rem;
+        padding-inline: 4rem; 
+        height: 40%;
+        width: 100%;
+        scroll-padding-inline: 4rem; 
+        box-sizing: border-box;
+
+        
 
     }
 
     .skills, .interests{
-        flex-shrink:0;
-        width:100px;
-        height: 100px;
-        scroll-snap-align: center;  
+        flex-shrink: 0;
+        scroll-snap-align: center;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        background: #FFB0B0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 1rem;
+        font-size: 1rem;
+        box-shadow: 4px 4px 10px grey;
+        color: #0C2D57;
+        font-weight: bolder; 
        
 
+    }
+
+    #github_link{
+    text-align: center;
+    margin-top: 4rem;
+    }
+
+    #gitlink{
+        color: #0C2D57;
+        text-decoration: none;
+        
+    }
+
+    #gitlink:hover{
+        color: #379777;
     }
 
     
@@ -350,5 +399,25 @@ main{
 
     .email-id{
         font-size: 1rem;
+    }
+
+    .projectsTitle{
+        font-size: 1.5rem;
+    }
+
+    #github_link{
+        text-align: center;
+        margin-top: 4rem;
+        font-size: 1rem;
+    }
+
+    #gitlink{
+        color: #0C2D57;
+        text-decoration: none;
+        
+    }
+
+    #gitlink:hover{
+        color: #379777;
     }
 }
